@@ -1,8 +1,11 @@
 #ifndef Creator_H
 #define Creator_H
-#include "SpaceCraft.h"
+#include "Spacecraft.h"
+#include <string>
 
 using namespace std;
+
+class Spacecraft;
 
 class Creator
 {

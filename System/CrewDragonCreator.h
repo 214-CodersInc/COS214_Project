@@ -1,6 +1,6 @@
 #ifndef CrewDragonCreator_H
 #define CrewDragonCreator_H
-#include "SpaceCraft.h"
+#include "Spacecraft.h"
 #include "Creator.h"
 
 using namespace std;
