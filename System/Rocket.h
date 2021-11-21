@@ -6,6 +6,7 @@
 #include<iostream>
 #include "TurnOff.h"
 #include "TurnOn.h"
+#include "ConcreteIterator.h"
 
 using namespace std;
 
@@ -25,6 +26,7 @@ public:
     void addVacuumEngine(Engine*);
     void replaceMerlinEngine(Engine*,int);
     void replaceVacuum(Engine*,int);
+    EngineIterator* createIterator(vector<Engine*>);
     friend class LaunchSimulator;
     virtual bool stage1Test();
     virtual bool stage2Test();
