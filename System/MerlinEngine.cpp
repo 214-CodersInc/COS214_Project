@@ -3,6 +3,10 @@
 MerlinEngine::MerlinEngine(int num1 ,int num2,int num3,int num4):Engine(num1,num2,num3,num4)
 {
 }
+Engine* MerlinEngine::clone()
+{
+    return new MerlinEngine(this->temp,this->pressure,this->fGradient,this->fuel);
+}
 
 bool MerlinEngine::testEngine()
 {

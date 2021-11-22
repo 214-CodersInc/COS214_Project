@@ -12,6 +12,7 @@ public:
      void On();
      void Off();
      bool testEngine();
+     Engine* clone();
     // bool staticFire();
      //void refill();
     ~MerlinEngine();

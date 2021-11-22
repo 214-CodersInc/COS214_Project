@@ -22,6 +22,7 @@ public:
     void Off();
     //virtual bool staticFire()=0;
     //virtual void refill();
+    virtual Engine* clone()=0; 
     EngineMemento *createMemento();
     void retrieveMemento(EngineMemento *mem);
     friend class Rocket;

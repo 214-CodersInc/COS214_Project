@@ -14,6 +14,7 @@ public:
      bool staticFire();
      bool testEngine();
      void refill();
+     Engine* clone();
     ~VacuumEngine();
 };
 

@@ -5,6 +5,11 @@ VacuumEngine::VacuumEngine(int num1,int num2,int num3,int num4):Engine(num1,num2
     status=false;
 }
 
+Engine* VacuumEngine::clone()
+{
+    return new VacuumEngine(this->temp,this->pressure,this->fGradient,this->fuel);
+}
+
 bool VacuumEngine::testEngine()
 {
     if(on)
