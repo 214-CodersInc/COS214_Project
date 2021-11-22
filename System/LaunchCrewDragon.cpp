@@ -6,12 +6,12 @@
 
 using namespace std;
 
-LaunchCrewDragon::LaunchCrewDragon()
+LaunchCrewDragon::LaunchCrewDragon()   ///Constructor
 {
     SetSuccessor(nullptr);
 }
 
-void LaunchCrewDragon::HandleRequest()
+void LaunchCrewDragon::HandleRequest()  ///Handling the request of the launch
 {
     bool check1 = false;
     int crewC = 0;
@@ -50,7 +50,7 @@ void LaunchCrewDragon::HandleRequest()
         }        
     }
  
-    /*cout<<"========Dragon Spacecraft Simulation========"<<endl;
+    /**cout<<"========Dragon Spacecraft Simulation========"<<endl;
     cout<<" "<<endl;*/
 
     Creator* crewDragonFact = new CrewDragonCreator();
@@ -69,6 +69,6 @@ void LaunchCrewDragon::HandleRequest()
 
 }
 
-LaunchCrewDragon::~LaunchCrewDragon()
+LaunchCrewDragon::~LaunchCrewDragon() ///Destructor
 {
 }
