@@ -1,15 +1,15 @@
 #include "LaunchSimulator.h"
 
-LaunchSimulator::LaunchSimulator(/* args */)  //Constructor
+LaunchSimulator::LaunchSimulator(/* args */)  ///Constructor
 {
 }
 
-void LaunchSimulator::addRocket(Rocket* roc)  //Adding Rockets to the Launch Simulator
+void LaunchSimulator::addRocket(Rocket* roc)  ///Adding Rockets to the Launch Simulator
 {
     rockets.push_back(roc);
 }
 
-bool LaunchSimulator::testRocket(int i)   //Testing the Rocket
+bool LaunchSimulator::testRocket(int i)   ///Testing the Rocket
 {
     int j=0;
     vector<Rocket*>::iterator it;
@@ -45,7 +45,7 @@ bool LaunchSimulator::testRocket(int i)   //Testing the Rocket
     return true;
 }
 
-bool LaunchSimulator::batchTest()   //Batch Testing the Rocket
+bool LaunchSimulator::batchTest()   ///Batch Testing the Rocket
 {
     int j=1;
     vector<Rocket*>::iterator it;
@@ -78,7 +78,7 @@ bool LaunchSimulator::batchTest()   //Batch Testing the Rocket
     return launch;
 }
 
-void LaunchSimulator::launchRocket(int i)   //Launching the rocket to orbit
+void LaunchSimulator::launchRocket(int i)   ///Launching the rocket to orbit
 {
     if(testRocket(i))
     {
@@ -90,7 +90,7 @@ void LaunchSimulator::launchRocket(int i)   //Launching the rocket to orbit
     }
 }
 
-void LaunchSimulator::batchLaunch()   //Launching multiple rockets at once
+void LaunchSimulator::batchLaunch()   ///Launching multiple rockets at once
 {
     if(batchTest())
     {
@@ -101,6 +101,6 @@ void LaunchSimulator::batchLaunch()   //Launching multiple rockets at once
     }
 }
 
-LaunchSimulator::~LaunchSimulator()  // Destructor
+LaunchSimulator::~LaunchSimulator()  /// Destructor
 {
 }
