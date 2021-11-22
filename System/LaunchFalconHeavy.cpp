@@ -1,11 +1,11 @@
 #include "LaunchFalconHeavy.h"
 
-LaunchFalconHeavy::LaunchFalconHeavy(Rocket* roc)
+LaunchFalconHeavy::LaunchFalconHeavy(Rocket* roc)  //Constructor, initialising the rocket
 {
     rocket=roc;
 }
 
-void LaunchFalconHeavy::HandleRequest()
+void LaunchFalconHeavy::HandleRequest()  // Handling the requests before launching to orbit
 {
     Engine* merlinEngines[27];
     merlinEngines[0]=new MerlinEngine(210,32,34,100);
@@ -49,5 +49,5 @@ void LaunchFalconHeavy::HandleRequest()
     cout<<"SpaceCraft succesfully loaded on the rocket"<<endl;
 }
 
-LaunchFalconHeavy::~LaunchFalconHeavy()
+LaunchFalconHeavy::~LaunchFalconHeavy()  //Destructor
 {}
