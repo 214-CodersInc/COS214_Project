@@ -1,16 +1,16 @@
 #include "VacuumEngine.h"
 
-VacuumEngine::VacuumEngine(int num1,int num2,int num3,int num4):Engine(num1,num2,num3,num4)
+VacuumEngine::VacuumEngine(int num1,int num2,int num3,int num4):Engine(num1,num2,num3,num4)  //Constructor initialising the status of the engine
 {
     status=false;
 }
 
-Engine* VacuumEngine::clone()
+Engine* VacuumEngine::clone()   //Clone function to duplicate the vacuum engine 
 {
     return new VacuumEngine(this->temp,this->pressure,this->fGradient,this->fuel);
 }
 
-bool VacuumEngine::testEngine()
+bool VacuumEngine::testEngine()  //Test engine function to test all aspects of the vacuum engine
 {
     if(on)
     {
@@ -60,6 +60,6 @@ bool VacuumEngine::testEngine()
     }
 }
 
-VacuumEngine::~VacuumEngine()
+VacuumEngine::~VacuumEngine()  //Destructor
 {
 }
