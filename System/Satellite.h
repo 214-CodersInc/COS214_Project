@@ -17,15 +17,17 @@ private:
     double area;
 
 public:
-    Satellite(User*,string,double, double);
-    virtual void update()=0;
-    virtual void registerSatellite(User*)=0;
+    Satellite(User*,string, string,double, double);
+    Satellite(const Satellite& sat);
+    //virtual void update()=0;
+    //virtual void registerSatellite(User*)=0;
     virtual bool testDistance();
     void statusChange();
     void setDistanceToOrbit(double dis); //new
     void Communicate(); //communication between satellites
     void sendSignal(); //new -communicstion between user and satellite
     void setStatus(string s){status= s;} //new
+    Satellite* clone();
     ~Satellite();
 
     string getUserName(){return user->getName();}
