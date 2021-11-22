@@ -41,7 +41,7 @@ void LaunchFalcon9::HandleRequest()
     DroneShip->launchRocket(0);  //test rocket 1 
 
     cout<<"Batch Testing the Rockets"<<endl;
-    DroneShip->batchLaunch();
+    //DroneShip->batchLaunch();
 
     //DELETING
     for(int i=0;i<9;i++)
@@ -49,6 +49,7 @@ void LaunchFalcon9::HandleRequest()
         delete merlinEngines[i];
     }
     delete vacuumEngine;
+    delete DroneShip;
     cout<<"Satellites have been attached to the rocket"<<endl;
 }
 

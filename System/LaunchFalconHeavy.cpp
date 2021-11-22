@@ -35,8 +35,8 @@ void LaunchFalconHeavy::HandleRequest()
 
     DroneShip->launchRocket(0);  //test rocket 1
 
-    cout<<"Batch Testing the Rockets"<<endl;
-    DroneShip->batchLaunch();
+    //cout<<"Batch Testing the Rockets"<<endl;
+    //DroneShip->batchLaunch();
 
     //DELETING
     for(int i=0;i<27;i++)
@@ -44,6 +44,7 @@ void LaunchFalconHeavy::HandleRequest()
         delete merlinEngines[i];
     }
     delete vacuumEngine;
+    delete DroneShip;
 
     cout<<"SpaceCraft succesfully loaded on the rocket"<<endl;
 }

@@ -20,11 +20,13 @@ bool LaunchSimulator::testRocket(int i)
         {
             if((*it)->stage1Test())
             {
-                cout<<"The rocket has been launched halfway into orbit"<<endl;
+                cout<<"=====The rocket has been launched halfway into orbit====="<<endl;
                 if((*it)->stage2Test())
                 {
                     cout<<"The rocket has been succefully launched into the orbit"<<endl;
+                    cout<<endl;
                     return true;
+                    
                 }
                 else{
                     cout<<"The Rocket has failed the stage 2 test"<<endl;
