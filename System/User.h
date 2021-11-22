@@ -10,7 +10,7 @@ class User: public Mediator
 private:
     /* data */
     vector<Satellite*> satellites;
-    String userName;
+    string userName;
 
 public:
     User(/* args */);
@@ -18,7 +18,7 @@ public:
     void attach(Satellite*);
     void detach(Satellite*);
     void notify();
-    void setName(string)
+    void setName(string);
     string getName();
     ~User();
 };

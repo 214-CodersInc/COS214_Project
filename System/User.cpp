@@ -57,6 +57,11 @@ void User::detach(Satellite* sat)
 
 void User::notify()
 {
+    
     //sendSignal() and receive signal
+     vector<Satellite*>::iterator it = satellites.begin();
+    for (it = satellites.begin(); it != satellites.end(); ++it){
+        (*it)->sendSignal();
 
 }
+
