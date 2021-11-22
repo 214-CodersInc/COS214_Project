@@ -5,11 +5,6 @@ Falcon9::Falcon9()
 }
 
 
-void Falcon9::attachSatellite(Satellite sat[])
-{
-    cluster=sat;
-}
-
 bool Falcon9::stage1Test()
 {
     cout<<"Initiating stage1 test of a Falcon9"<<endl;

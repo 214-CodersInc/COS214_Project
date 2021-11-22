@@ -64,12 +64,12 @@ void LaunchRocket::HandleRequest()
     //adding vacuumEngine
     FH->addVacuumEngine(VacuumEngines[1]);
 
-    //Load the SpaceCraft with humans and cargo
+    /*//Load the SpaceCraft with humans and cargo
     Humans* humans=new Humans(30);
     Cargo* cargo=new Cargo(100);
     CrewDragon* CD=new CrewDragon(cargo,humans);
     //ATTACH THE SPACECRAFT
-    FH->loadSpaceCraft(CD);
+    FH->loadSpaceCraft(CD);*/
 
     //Simulate the rockets
     LaunchSimulator* DroneShip=new LaunchSimulator();
@@ -100,9 +100,9 @@ void LaunchRocket::HandleRequest()
     }
 
     delete FH;
-    delete humans;
-    delete cargo;
-    delete CD;
+    //delete humans;
+    //delete cargo;
+    //delete CD;
     delete user1;
 }
 

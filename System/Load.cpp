@@ -5,23 +5,23 @@
 
 using namespace std;
 
-Load::Load(int loadCapacity)	//initialises Load Constuctor with loadCapacity variable and received variable
+Load::Load(int loadCapacity)
 {
 	this->loadCapacity = loadCapacity;
 	this->received = false;
 }
 
-void Load::setReceipt(bool b)	//sets the receipt variable 'received'
+void Load::setReceipt(bool b)
 {
 	this->received = b;
 }
 
-void Load::setCapacity(int c)	//sets the capacity variable 'loadCapacity
+void Load::setCapacity(int c)
 {
 	this->loadCapacity = c;
 }
 
-Load::~Load()	//Load destructor
+Load::~Load()
 {
 	
 }

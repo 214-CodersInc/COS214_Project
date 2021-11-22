@@ -1,19 +1,19 @@
 #include "TurnOn.h"
 
-TurnOn::TurnOn(Engine* e):Command(e)      ///The turnOn fuction that inherits from the command class
+TurnOn::TurnOn(Engine* e):Command(e)
 {
 }
 
-void TurnOn::execute()                  /// The execute function that triggers the receiver's engine ON function
+void TurnOn::execute()
 {
     getReceiver()->On();
 }
 
-void TurnOn::undo()                   /// The undo function that triggers the receiver's engine OFF function
+void TurnOn::undo()
 {
     getReceiver()->Off();
 }
 
-TurnOn::~TurnOn()                    /// The destructor
+TurnOn::~TurnOn()
 {
 }

@@ -8,10 +8,8 @@ class FalconHeavy : public Rocket
 {
 private:
     /* data */
-    vector<SpaceCraft*> sp;
 public:
     FalconHeavy();
-    void loadSpaceCraft(SpaceCraft*);
     bool stage1Test();
     bool stage2Test();
     ~FalconHeavy();

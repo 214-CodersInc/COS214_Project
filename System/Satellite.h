@@ -18,25 +18,16 @@ private:
     double area;
 
 public:
-    Satellite(User*,string, string,double, double);
-    Satellite(const Satellite& sat);
-    Satellite* clone();
-
-    void sendSignal(); //This is void update()
+    Satellite(User*,string,int);
+    void update();
     void registerSatellite(User*);
-    void statusChange();
-    void updateDistance(); //new
-    void Communicate(); //communication between satellites
-
-    //string sendSignal(); //new -communicstion between user and satellite
-     //new
     bool testDistance();
-    double getDistance(){ return distance;}
-
-    void setStatus(string s){status= s;}
-    string getName(){ return name;}
-    string getUserName(){ return user->getName();}
-    
+    void statusChange();
+    void setDistanceToOrbit(double dis); //new
+    void Communicate(); //communication between satellites
+    string sendSignal(); //new -communicstion between user and satellite
+    void setStatus(string s){status= s;} //new
+    Satellite* clone();
     ~Satellite();
 };
 

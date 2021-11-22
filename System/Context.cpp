@@ -5,35 +5,35 @@
 
 using namespace std;
 
-Context::Context(Load* l)	//Context Constructor, instatiates Strategy Design pattern
+Context::Context(Load* l)
 {
 	this->strategy = l;
 	
 }
 
-void Context::setReceipt(bool b)	//calls setReceipt()
+void Context::setReceipt(bool b)
 {
 	strategy->setReceipt(b);
 }
 
-void Context::setCapacity(int c)	//calls setCapacity()
+void Context::setCapacity(int c)
 {
 	strategy->setCapacity(c);
 }
 
-bool Context::loadReceipt()	//calls receive()
+bool Context::loadReceipt()
 {
 	return strategy->receive();
 	
 }
 
-bool Context::testCapacity()	//calls test()
+bool Context::testCapacity()
 {
 	return strategy->test();
 }
 
 
-Context::~Context()	//Context destructor
+Context::~Context()
 {
 	delete strategy;
 	strategy=0;

@@ -4,10 +4,7 @@ FalconHeavy::FalconHeavy()
 {
 
 }
-void FalconHeavy::loadSpaceCraft(SpaceCraft* space)
-{
-    sp.push_back(space);
-}
+
 
 bool FalconHeavy::stage1Test()
 {

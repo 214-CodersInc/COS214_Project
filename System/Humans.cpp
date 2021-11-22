@@ -5,17 +5,17 @@
 
 using namespace std;
 
-Humans::Humans(int capacity):Load(capacity)	//Initialises Humans Constructor
+Humans::Humans(int capacity):Load(capacity)
 {
 	
 }
 
-bool Humans::receive()	//returns receipt variable 'received'
+bool Humans::receive()
 {
 	return this->received;
 }
 
-bool Humans::test()	//checks that the amount of humans on board is less than 600 and returns boolean true, else false
+bool Humans::test()
 {
 	int max = 600;
 	if(loadCapacity <= max)
@@ -30,7 +30,7 @@ bool Humans::test()	//checks that the amount of humans on board is less than 600
 	}
 }
 
-Humans::~Humans()	//Humans destructor
+Humans::~Humans()
 {
 	cout<<"Crew safely transported"<<endl;
 }
