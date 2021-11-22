@@ -6,6 +6,6 @@ EngineIterator::EngineIterator(vector<Engine*> lis)  //
     currentPos=0;
 }
 
-EngineIterator::~EngineIterator()  // Destructor
+EngineIterator::~EngineIterator()  /// Destructor
 {
 }
