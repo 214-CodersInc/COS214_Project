@@ -1,7 +1,6 @@
 #ifndef FalconHeavy_H
 #define FalconHeavy_H
 #include "Rocket.h"
-#include "SpaceCraft.h"
 using namespace std;
 
 class FalconHeavy : public Rocket

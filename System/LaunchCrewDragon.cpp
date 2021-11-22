@@ -68,3 +68,7 @@ void LaunchCrewDragon::HandleRequest()
     cout<<"==========End of simulation=========="<<endl;
 
 }
+
+LaunchCrewDragon::~LaunchCrewDragon()
+{
+}

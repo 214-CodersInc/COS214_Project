@@ -5,6 +5,7 @@
 #include "Satellite.h"
 #include "Mediator.h"
 
+using namespace std;
 class User: public Mediator
 {
 private:

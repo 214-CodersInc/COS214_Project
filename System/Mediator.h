@@ -12,11 +12,4 @@ public:
     ~Mediator();
 };
 
-Mediator::Mediator(/* args */)
-{
-}
-
-Mediator::~Mediator()
-{
-}
 #endif

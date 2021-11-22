@@ -1,5 +1,5 @@
-#ifndef LaunchCrewDragon_H
-#define LaunchCrewDragon_H
+#ifndef LaunchDragonSpacecraft_H
+#define LaunchDragonSpacecraft_H
 #include "Spacecraft.h"
 #include "Load.h"
 #include "Context.h"
@@ -17,12 +17,12 @@
 
 using namespace std;
 
-class LaunchCrewDragon:public Launch
+class LaunchDragonSpacecraft:public Launch
 {
 public:
-    LaunchCrewDragon();
+    LaunchDragonSpacecraft();
     void HandleRequest();
-    ~LaunchCrewDragon();
+    ~LaunchDragonSpacecraft();
 };
 
 #endif

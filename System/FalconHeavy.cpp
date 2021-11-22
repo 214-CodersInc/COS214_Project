@@ -6,9 +6,9 @@ FalconHeavy::FalconHeavy()
 }
 
 
-bool FalconHeavy::stage1Test()
+bool FalconHeavy::stage1Test()  //
 {
-    cout<<"Initiating stage1 test of a FaconHeavy"<<endl;
+    cout<<"Initiating stage1 test of a FalconHeavy"<<endl;
     return Rocket::stage1Test();
 }
 

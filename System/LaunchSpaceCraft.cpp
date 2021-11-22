@@ -109,3 +109,8 @@ void LaunchSpaceCraft::HandleRequest()
     cout<<"==========End of simulation=========="<<endl;
 
 }
+
+LaunchSpaceCraft::~LaunchSpaceCraft()
+{
+    
+}

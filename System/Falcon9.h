@@ -8,6 +8,7 @@ class Falcon9 :public Rocket
 {
 private:
     /* data */
+    //Satellite* cluster;   //60 per Rockets
 public:
     Falcon9();
     bool stage1Test();

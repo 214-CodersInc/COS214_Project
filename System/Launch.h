@@ -20,7 +20,7 @@ public:
     virtual void HandleRequest()=0;
     void SetSuccessor(Launch*);
     Launch* getSuccessor();
-    ~Launch();
+    virtual ~Launch();
 };
 
 #endif

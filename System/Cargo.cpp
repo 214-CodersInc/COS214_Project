@@ -5,17 +5,17 @@
 
 using namespace std;
 
-Cargo::Cargo(int capacity):Load(capacity)
+Cargo::Cargo(int capacity):Load(capacity)	//Initialises Cargo constructor 
 {
 	
 }
 
-bool Cargo::receive()
+bool Cargo::receive()	//receive function which returns receipt variable
 {
 	return this->received;
 }
 
-bool Cargo::test()
+bool Cargo::test()	//makes sure the amount of cargo on the is less than 10000 and sends boolean true confirmation, else false
 {
 	
 	int max = 10000;
@@ -31,7 +31,7 @@ bool Cargo::test()
 	}
 }
 
-Cargo::~Cargo()
+Cargo::~Cargo()		//Cargo destructor
 {
 	cout<<"Cargo safely transported"<<endl;
 }

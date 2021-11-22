@@ -1,10 +1,13 @@
 #ifndef Satellite_H
 #define Satellite_H
-#include "User.h"
 #include <string>
+#include<vector>
 #include <iostream>
+#include "Mediator.h"
+//#include "User.h"
 using namespace std;
 
+class Mediator;
 class Satellite
 {
 private:
@@ -12,22 +15,30 @@ private:
     string name;
     string status;
 
-    User* user;
+    Mediator* user;
     double distance;
     double distanceToOrbit;
     double area;
 
 public:
-    Satellite(User*,string,int);
-    void update();
-    void registerSatellite(User*);
-    bool testDistance();
-    void statusChange();
-    void setDistanceToOrbit(double dis); //new
-    void Communicate(); //communication between satellites
-    string sendSignal(); //new -communicstion between user and satellite
-    void setStatus(string s){status= s;} //new
+    Satellite(Mediator* ,string, string,double, double);
+    Satellite(const Satellite& sat);
     Satellite* clone();
+
+    void sendSignal(); //This is void update()
+    void registerSatellite(Mediator*);
+    void statusChange();
+    void updateDistance(); //new
+    void Communicate(); //communication between satellites
+
+    //string sendSignal(); //new -communicstion between user and satellite
+     //new
+    bool testDistance();
+    double getDistance();
+    void setStatus(string s);
+    string getName();
+    string getUserName();
+    
     ~Satellite();
 };
 

@@ -51,3 +51,8 @@ void LaunchSatellite::HandleRequest()
     cout<<"==========End of simulation=========="<<endl;
 
 }
+
+LaunchSatellite::~LaunchSatellite()
+{
+    
+}
