@@ -1,14 +1,14 @@
 #include "MerlinEngine.h"
 
-MerlinEngine::MerlinEngine(int num1 ,int num2,int num3,int num4):Engine(num1,num2,num3,num4)  //Constructor
+MerlinEngine::MerlinEngine(int num1 ,int num2,int num3,int num4):Engine(num1,num2,num3,num4)  ///Constructor
 {
 }
-Engine* MerlinEngine::clone()    // The clone function to duplicate the merlin engine
+Engine* MerlinEngine::clone()    /// The clone function to duplicate the merlin engine
 {
     return new MerlinEngine(this->temp,this->pressure,this->fGradient,this->fuel);
 }
 
-bool MerlinEngine::testEngine()   //Test engine function to test all the aspects of the merlin engine
+bool MerlinEngine::testEngine()   ///Test engine function to test all the aspects of the merlin engine
 {
     if(on)
     {
@@ -57,6 +57,6 @@ bool MerlinEngine::testEngine()   //Test engine function to test all the aspects
     }
 }
 
-MerlinEngine::~MerlinEngine()   //Destructor
+MerlinEngine::~MerlinEngine()   ///Destructor
 {
 }
