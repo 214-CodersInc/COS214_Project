@@ -21,18 +21,20 @@ private:
     double area;
 
 public:
+    
+    ///Brief Description: Creates a satellite object and allows the satellites to communicate with each other. Uses the medaitor and observer pattern
     Satellite(Mediator* ,string, string,double, double);
     Satellite(const Satellite& sat);
     Satellite* clone();
 
-    void sendSignal(); //This is void update()
+    void sendSignal(); ///This is void update()
     void registerSatellite(Mediator*);
-    void statusChange();
-    void updateDistance(); //new
-    void Communicate(); //communication between satellites
+    void statusChange(); /// updates the status of the satellite
+    void updateDistance(); // updates the distance till satellite is in the correct place
+    void Communicate(); ///this function communications between satellites
 
-    //string sendSignal(); //new -communicstion between user and satellite
-     //new
+    //string sendSignal(); ///communication between user and satellite
+     
     bool testDistance();
     double getDistance();
     void setStatus(string s);
