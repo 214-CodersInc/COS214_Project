@@ -55,7 +55,7 @@ bool Rocket::stage2Test()   //Stage 2 Test, testing if the Vacuum engine pass th
     cout<<"Stage 2:Vacuum Engine static Test is initiated."<<endl;
     bool ok=false;
     int index=1;
-    EngineIterator* it=createIterator(MerlinEngines);
+    EngineIterator* it=createIterator(VacuumEngines);
     //Iterator Design Pattern
     Engine* temp=it->first();
     while(temp!=NULL)  //first engine
