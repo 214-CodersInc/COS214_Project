@@ -1,6 +1,6 @@
 #include "Launch.h"
 
-Launch::Launch()
+Launch::Launch()  //Constructor
 {
 }
 
@@ -9,6 +9,6 @@ void Launch::SetSuccessor(Launch* set)
     Succesor=set;
 }
 
-Launch::~Launch()
+Launch::~Launch()  //Destructor
 {
 }
