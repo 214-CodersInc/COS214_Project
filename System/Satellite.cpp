@@ -1,13 +1,10 @@
 #include "Satellite.h"
 
-using namespace std;
-
-Satellite::Satellite(User* Name, string Status, double dist, double _area)
+Satellite::Satellite(User* Name,string Status, int dist)
 {
-    this->name= Name;
-    this->status= Status;
-    this->distance= dist;
-    this->area= _area;
+    user=Name;
+    name= Status;
+    distance= dist;
 }
 
 void Satellite::setDistanceToOrbit(double dis)
@@ -26,7 +23,6 @@ bool Satellite::testDistance()
         cout<<"Orbits reached"<<endl;
         cout<<"Satellites will slowly spread out equally to cover a large area"<<endl;
 
-
         //calculation to get the area that each satellite will occupy
     
     }
@@ -44,6 +40,12 @@ bool Satellite::testDistance()
         }
     }
 
+}
+
+Satellite* Satellite::clone()
+{
+    Satellite* satie=new Satellite(this->user,this->name,this->distanceToOrbit);
+    return satie;
 }
 
 void Satellite::statusChange()
@@ -80,9 +82,4 @@ void Satellite::statusChange()
         cout<<"Satellite already in Position."<<endl;
     }
     
-}
-
-void Satellite::sendSignal()
-{
-    cout<<getName() <<" sent communication via signal to "<<getUserName()<<endl;
 }
