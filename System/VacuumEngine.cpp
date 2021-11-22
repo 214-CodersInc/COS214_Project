@@ -1,34 +1,34 @@
 #include "VacuumEngine.h"
 
-VacuumEngine::VacuumEngine(int num1,int num2,int num3,int num4):Engine(num1,num2,num3,num4)  //Constructor initialising the status of the engine
+VacuumEngine::VacuumEngine(int num1,int num2,int num3,int num4):Engine(num1,num2,num3,num4)  ///Constructor initialising the status of the engine
 {
     status=false;
 }
 
-Engine* VacuumEngine::clone()   //Clone function to duplicate the vacuum engine 
+Engine* VacuumEngine::clone()   ///Clone function to duplicate the vacuum engine 
 {
     return new VacuumEngine(this->temp,this->pressure,this->fGradient,this->fuel);
 }
 
-bool VacuumEngine::testEngine()  //Test engine function to test all aspects of the vacuum engine
+bool VacuumEngine::testEngine()  ///Test engine function to test all aspects of the vacuum engine
 {
     if(on)
     {
         EngineStore* storage=new EngineStore();
-        storage->storeMemento(this->createMemento());    //store the Initial Temp and fuel of engine before testing
+        storage->storeMemento(this->createMemento());    ///store the Initial Temp and fuel of engine before testing
         fuel-=28; 
         temp+=8;
-        if(fGradient>=30 && fGradient<60)  //Flow gradi3ent between 30 and 40
+        if(fGradient>=30 && fGradient<60)  ///Flow gradi3ent between 30 and 40
         {
             status=true;
-            if(pressure>=50 && pressure<100 && status)  //oil pressure  between 30 and 100 
+            if(pressure>=50 && pressure<100 && status)  ///oil pressure  between 30 and 100 
             {
                 fuel-=28;
                 temp+=10;
-                if(temp>=200 && temp<350 && status)  //Temperature between 200 and 350
+                if(temp>=200 && temp<350 && status)  ///Temperature between 200 and 350
                 {
 
-                    retrieveMemento(storage->retrieve());     //restore the original fuel and temperature values 
+                    retrieveMemento(storage->retrieve());     ///restore the original fuel and temperature values 
                 }
                 else
                 {
