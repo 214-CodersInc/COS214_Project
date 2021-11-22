@@ -1,16 +1,16 @@
 #include "Rocket.h"
 
-Rocket::Rocket()
+Rocket::Rocket()   //Constructor
 {
 }
 
-void Rocket::addMerlinEngine(Engine* e)
+void Rocket::addMerlinEngine(Engine* e)   //Adding Merlin engines to the Rocket 
 {
    // numEngines++;
     MerlinEngines.push_back(e);
 }
 
-void Rocket::addVacuumEngine(Engine* e)
+void Rocket::addVacuumEngine(Engine* e)  // Adding Vacuum engines to the Rocket
 {
     //numEngines++;
     VacuumEngines.push_back(e);
@@ -21,7 +21,7 @@ EngineIterator* Rocket::createIterator(vector<Engine*> lis)   //creating a new I
     return new ConcreteIterator(lis);
 }
 
-bool Rocket::stage1Test()
+bool Rocket::stage1Test()  //Stage 1 Test, testing if the Merlin engine pass the first stage 
 {
     cout<<"Stage 1:Merlin engines static fire test is initiated!"<<endl;
     bool ok=false;
@@ -49,7 +49,7 @@ bool Rocket::stage1Test()
     return true;
 }
 
-bool Rocket::stage2Test()
+bool Rocket::stage2Test()   //Stage 2 Test, testing if the Vacuum engine pass the second stage
 {
     cout<<endl;
     cout<<"Stage 2:Vacuum Engine static Test is initiated."<<endl;
@@ -78,6 +78,6 @@ bool Rocket::stage2Test()
     return true;
 }
 
-Rocket::~Rocket()
+Rocket::~Rocket()  //Destructor
 {
 }
