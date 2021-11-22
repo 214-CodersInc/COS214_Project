@@ -46,13 +46,6 @@ void LaunchSatellite::HandleRequest()
     }
     setallite->statusChange();
 
-    
-
-
-
-    cout<<"Beginning Satellite simulation....."<<endl;
-    cout<<" "<<endl;
-
    
     cout<<" "<<endl;
     cout<<"==========End of simulation=========="<<endl;
