@@ -19,8 +19,8 @@ private:
 public:
     Satellite(User*,string, string,double, double);
     Satellite(const Satellite& sat);
-    //virtual void update()=0;
-    //virtual void registerSatellite(User*)=0;
+    virtual void update();
+    virtual void registerSatellite(User*);
     virtual bool testDistance();
     void statusChange();
     void setDistanceToOrbit(double dis); //new
