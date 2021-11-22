@@ -40,7 +40,7 @@ void User::detach(Satellite* sat)
     {
        bool found = false;
 
-        vector<satellites*>::iterator it = satellites.begin();
+        vector<Satellite*>::iterator it = satellites.begin();
 
         while ((it != satellites.end()) && (!found)) {
             
@@ -62,6 +62,5 @@ void User::notify()
      vector<Satellite*>::iterator it = satellites.begin();
     for (it = satellites.begin(); it != satellites.end(); ++it){
         (*it)->sendSignal();
-
 }
 
