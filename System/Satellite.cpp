@@ -25,9 +25,9 @@ Satellite* Satellite::clone()
     return new Satellite(*this);
 }
 
-void Satellite::setDistanceToOrbit(double dis)
+void Satellite::updateDistance()
 {
-    distanceToOrbit= dis;
+    distance+=200;
 }
 
 Satellite::~Satellite()
@@ -41,6 +41,9 @@ bool Satellite::testDistance()
         cout<<"Orbits reached"<<endl;
         cout<<"Satellites will slowly spread out equally to cover a large area"<<endl;
 
+
+        //calculation to get the area that each satellite will occupy
+    
     }
     else{
         if(this->distance < distanceToOrbit)

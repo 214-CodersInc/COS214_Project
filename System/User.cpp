@@ -64,3 +64,4 @@ void User::notify()
     (*it)->sendSignal();
 
 }
+}
