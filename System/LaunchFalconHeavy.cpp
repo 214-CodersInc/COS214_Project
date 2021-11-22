@@ -1,11 +1,11 @@
 #include "LaunchFalconHeavy.h"
 
-LaunchFalconHeavy::LaunchFalconHeavy(Rocket* roc)  //Constructor, initialising the rocket
+LaunchFalconHeavy::LaunchFalconHeavy(Rocket* roc)  ///Constructor, initialising the rocket
 {
     rocket=roc;
 }
 
-void LaunchFalconHeavy::HandleRequest()  // Handling the requests of the engines before launching to orbit
+void LaunchFalconHeavy::HandleRequest()  /// Handling the requests of the engines before launching to orbit
 {
     Engine* merlinEngines[27];
     merlinEngines[0]=new MerlinEngine(210,32,34,100);
@@ -14,8 +14,8 @@ void LaunchFalconHeavy::HandleRequest()  // Handling the requests of the engines
         merlinEngines[i]=merlinEngines[0]->clone();
     }
 
-    //Vacuum Engines
-    /* 
+    ///Vacuum Engines
+    /** 
     240<=Temp<350
     50 <=oilPresure<=100
     40<=FlowGradient<=50
@@ -26,19 +26,19 @@ void LaunchFalconHeavy::HandleRequest()  // Handling the requests of the engines
     {
         rocket->addMerlinEngine(merlinEngines[i]);
     }
-    //adding vacuumEngine
+    ///adding vacuumEngine
     rocket->addVacuumEngine(vacuumEngine);
 
-    //Simulate the rockets
+    ///Simulate the rockets
     LaunchSimulator* DroneShip=new LaunchSimulator();
     DroneShip->addRocket(rocket);
 
     DroneShip->launchRocket(0);  //test rocket 1
 
-    //cout<<"Batch Testing the Rockets"<<endl;
-    //DroneShip->batchLaunch();
+    ///cout<<"Batch Testing the Rockets"<<endl;
+    ///DroneShip->batchLaunch();
 
-    //DELETING
+    ///DELETING
     for(int i=0;i<27;i++)
     {
         delete merlinEngines[i];
@@ -49,5 +49,5 @@ void LaunchFalconHeavy::HandleRequest()  // Handling the requests of the engines
     cout<<"SpaceCraft succesfully loaded on the rocket"<<endl;
 }
 
-LaunchFalconHeavy::~LaunchFalconHeavy()  //Destructor
+LaunchFalconHeavy::~LaunchFalconHeavy()  ///Destructor
 {}
