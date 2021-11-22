@@ -5,7 +5,7 @@ LaunchFalconHeavy::LaunchFalconHeavy(Rocket* roc)  //Constructor, initialising t
     rocket=roc;
 }
 
-void LaunchFalconHeavy::HandleRequest()  // Handling the requests before launching to orbit
+void LaunchFalconHeavy::HandleRequest()  // Handling the requests of the engines before launching to orbit
 {
     Engine* merlinEngines[27];
     merlinEngines[0]=new MerlinEngine(210,32,34,100);
