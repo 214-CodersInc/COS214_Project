@@ -13,18 +13,13 @@
 #include<string>
 #include<iostream>
 #include<list>
+#include "User.h"
 using namespace std;
 
 
 int main()
 {
-    //Merlin engines
-    /* 
-    200<=Temp<250
-    30<=oilPresure<=50
-    30<=FlowGradient<=40
-    */
-    Engine* merlinEngines[27];
+     Engine* merlinEngines[27];
     for(int i=0;i<27;i++)
     {
         merlinEngines[i]=new MerlinEngine(210,32,34,100);
@@ -44,14 +39,17 @@ int main()
 
     //Falcon 9 Rocket
     Falcon9* falcon9_1=new Falcon9();
+    User* user1=new User("Gift");
     Satellite* saties[60];
-    for(int i=0;i<60;i++)
+    saties[0]=new Satellite(user1,"Sattie 1",25);
+    for(int i=1;i<60;i++)
     {
-        saties[i]=new Satellite();
+        saties[i]=saties[0]->clone();
     }
 
     //attaching a Cluister of sattelites
     falcon9_1->attachSatellite(*saties);
+    cout<<"Satellites loaded onto the rocket"<<endl;
 
     //adding engines
     for(int i=0;i<9;i++)
@@ -84,9 +82,11 @@ int main()
     DroneShip->addRocket(falcon9_1);
     DroneShip->addRocket(FH);
 
-    DroneShip->testRocket(0);  //test rocket 1
-    DroneShip->testRocket(1);  //test Rocket 2  
+    DroneShip->launchRocket(0);  //test rocket 1
+    //DroneShip->testRocket(1);  //test Rocket 2  
 
+    cout<<"Batch Testing the Rockets"<<endl;
+    DroneShip->batchLaunch();
 
     //DELETING
     delete falcon9_1;
@@ -100,7 +100,7 @@ int main()
         delete VacuumEngines[i];
     }
 
-    for(int i=0;i<60;i++)
+    for(int i=0;i<59;i++)
     {
         delete saties[i];
     }
@@ -109,7 +109,7 @@ int main()
     delete humans;
     delete cargo;
     delete CD;
-    
+    delete user1;
 
     return 0;
 }
