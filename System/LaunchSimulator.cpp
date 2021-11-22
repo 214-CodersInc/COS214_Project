@@ -16,7 +16,7 @@ bool LaunchSimulator::testRocket(int i)   ///Testing the Rocket
 
     for(it=rockets.begin();it<rockets.end();it++)
     {
-        if(j==i)  //rocket found
+        if(j==i)  ///rocket found
         {
             if((*it)->stage1Test())
             {
@@ -60,7 +60,7 @@ bool LaunchSimulator::batchTest()   ///Batch Testing the Rocket
             if((*it)->stage2Test())
             {
                 cout<<"The rocket has been succefully launched into the orbit"<<endl;
-                launch=true;  //succesful launch simulation
+                launch=true;  ///succesful launch simulation
             }
             else
             {
