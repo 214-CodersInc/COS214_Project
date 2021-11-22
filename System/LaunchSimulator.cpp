@@ -1,15 +1,15 @@
 #include "LaunchSimulator.h"
 
-LaunchSimulator::LaunchSimulator(/* args */)
+LaunchSimulator::LaunchSimulator(/* args */)  //Constructor
 {
 }
 
-void LaunchSimulator::addRocket(Rocket* roc)
+void LaunchSimulator::addRocket(Rocket* roc)  //Adding Rockets to the Launch Simulator
 {
     rockets.push_back(roc);
 }
 
-bool LaunchSimulator::testRocket(int i)
+bool LaunchSimulator::testRocket(int i)   //Testing the Rocket
 {
     int j=0;
     vector<Rocket*>::iterator it;
@@ -45,7 +45,7 @@ bool LaunchSimulator::testRocket(int i)
     return true;
 }
 
-bool LaunchSimulator::batchTest()
+bool LaunchSimulator::batchTest()   //Batch Testing the Rocket
 {
     int j=1;
     vector<Rocket*>::iterator it;
@@ -78,7 +78,7 @@ bool LaunchSimulator::batchTest()
     return launch;
 }
 
-void LaunchSimulator::launchRocket(int i)
+void LaunchSimulator::launchRocket(int i)   //Launching the rocket to orbit
 {
     if(testRocket(i))
     {
@@ -101,6 +101,6 @@ void LaunchSimulator::batchLaunch()   //Launching multiple rockets at once
     }
 }
 
-LaunchSimulator::~LaunchSimulator()
+LaunchSimulator::~LaunchSimulator()  // Destructor
 {
 }
