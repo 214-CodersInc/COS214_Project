@@ -41,9 +41,6 @@ bool Satellite::testDistance()
         cout<<"Orbits reached"<<endl;
         cout<<"Satellites will slowly spread out equally to cover a large area"<<endl;
 
-
-        //calculation to get the area that each satellite will occupy
-    
     }
     else{
         if(this->distance < distanceToOrbit)
