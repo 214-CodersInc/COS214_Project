@@ -3,31 +3,35 @@
 #include <string>
 #include <cstring>
 
-Humans:Humans(int capacity):Load(capacity)
+using namespace std;
+
+Humans::Humans(int capacity):Load(capacity)
 {
 	
 }
 
-bool Humans:receive()
+bool Humans::receive()
 {
 	return this->received;
 }
 
-bool Humans:test()
+bool Humans::test()
 {
-	cout<<"Crew loaded onto Spacecraft"<<endl;
-	int max = 10000;
+	int max = 600;
 	if(loadCapacity <= max)
 	{
+		cout<<"Crew loaded onto Spacecraft"<<endl;
+		cout<<" "<<endl;
 		return true;
 	}
 	else
 	{
 		return false;
+	}
 }
 
-Humans:~Humans()
+Humans::~Humans()
 {
-	cout<<"Humans Destroyed"<<endl;
+	cout<<"Crew safely transported"<<endl;
 }
 

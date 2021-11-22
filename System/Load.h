@@ -1,15 +1,18 @@
 #ifndef Load_H
 #define Load_H
 
+using namespace std;
+
 class Load
 {
 public:
     Load(int loadCapacity);
     int loadCapacity;
     bool received;
+    void setCapacity(int c);
     void setReceipt(bool b);  //Setter function to set "received" attribute
-    virtual void receive()=0;
-    virtual bool testCapacity()=0;
+    virtual bool receive()=0;
+    virtual bool test()=0;
     virtual ~Load();
 
 };
