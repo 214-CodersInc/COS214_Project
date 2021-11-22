@@ -6,12 +6,12 @@
 
 using namespace std;
 
-LaunchSatellite::LaunchSatellite()
+LaunchSatellite::LaunchSatellite()   ///Constructor
 {
     
 }
 
-void LaunchSatellite::HandleRequest()
+void LaunchSatellite::HandleRequest()   ///Handling the requests of the satallite before launching to orbit
 {
    
 
@@ -52,7 +52,7 @@ void LaunchSatellite::HandleRequest()
 
 }
 
-LaunchSatellite::~LaunchSatellite()
+LaunchSatellite::~LaunchSatellite()  ///Destructor
 {
     
 }
