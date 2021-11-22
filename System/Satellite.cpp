@@ -2,12 +2,27 @@
 
 using namespace std;
 
-Satellite::Satellite(User* Name, string Status, double dist, double _area)
+Satellite::Satellite(User* _user, string Name, string Status, double dist, double _area)
 {
     this->name= Name;
+    this->user = _user;
     this->status= Status;
     this->distance= dist;
     this->area= _area;
+}
+
+Satellite::Satellite(const Satellite& sat)
+{
+    user= sat.user;
+    name=sat.name;
+    status= sat.status;
+    distance = sat.distance;
+    area= sat.area;
+}
+
+Satellite* Satellite::clone()
+{
+    return new Satellite(*this);
 }
 
 void Satellite::setDistanceToOrbit(double dis)
