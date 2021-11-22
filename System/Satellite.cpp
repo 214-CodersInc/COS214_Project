@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Satellite::Satellite(Mediator* _user, string Name, string Status, double dist, double _area)
+Satellite::Satellite(Mediator* _user, string Name, string Status, double dist, double _area)  ///Constructor, initialising all the variables
 {
     this->name= Name;
     this->user = _user;
@@ -18,7 +18,7 @@ void Satellite::setStatus(string s)
     status= s;
 }
 
-Satellite::Satellite(const Satellite& sat)
+Satellite::Satellite(const Satellite& sat)  ///Constructor
 {
     user= sat.user;
     name=sat.name;
@@ -27,21 +27,21 @@ Satellite::Satellite(const Satellite& sat)
     area= sat.area;
 }
 
-Satellite* Satellite::clone()
+Satellite* Satellite::clone()  ///Clone funtion to duplicate the satellite
 {
     return new Satellite(*this);
 }
 
-void Satellite::updateDistance()
+void Satellite::updateDistance()   
 {
     distance+=200;
 }
 
-Satellite::~Satellite()
+Satellite::~Satellite()  ///Destructor
 {
 }
 
-bool Satellite::testDistance()
+bool Satellite::testDistance()   ///Testing and validating distance
 {
     if( this->distance == distanceToOrbit)
     {
