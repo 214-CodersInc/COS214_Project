@@ -33,7 +33,7 @@ void LaunchFalconHeavy::HandleRequest()  /// Handling the requests of the engine
     LaunchSimulator* DroneShip=new LaunchSimulator();
     DroneShip->addRocket(rocket);
 
-    DroneShip->launchRocket(0);  //test rocket 1
+    DroneShip->launchRocket(0);  ///test rocket 1
 
     ///cout<<"Batch Testing the Rockets"<<endl;
     ///DroneShip->batchLaunch();
