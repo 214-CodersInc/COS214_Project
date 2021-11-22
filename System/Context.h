@@ -2,6 +2,8 @@
 #define Context_H
 #include "Load.h"
 
+using namespace std;
+
 class Context
 {
     public:
@@ -10,6 +12,7 @@ class Context
         bool testCapacity();
         bool loadReceipt();
         void setReceipt(bool b); //Setter function used in Load
+        void setCapacity(int c); //Setter function used in Load
     private:
         Load* strategy;
 };

@@ -3,35 +3,26 @@
 #include <string>
 #include <cstring>
 
-Load:Load(int loadCapacity)
+using namespace std;
+
+Load::Load(int loadCapacity)
 {
 	this->loadCapacity = loadCapacity;
 	this->received = false;
 }
 
-void Load:setReceipt(bool b)
+void Load::setReceipt(bool b)
 {
 	this->received = b;
 }
 
-void Load:receive()
+void Load::setCapacity(int c)
 {
-	return received;
+	this->loadCapacity = c;
 }
 
-bool Load:testCapacity()
+Load::~Load()
 {
-	if(loadCapacity>0)
-		{
-			return true
-		}
-	else
-		return false;
 	
-}
-
-Load:~Load()
-{
-	cout<<"Load Destroyed"<<endl;
 }
 

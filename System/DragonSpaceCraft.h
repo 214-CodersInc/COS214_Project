@@ -1,15 +1,16 @@
 #ifndef DragonSpaceCraft_H
 #define DragonSpaceCraft_H
-#include "SpaceCraft.h"
+#include "Spacecraft.h"
 
 using namespace std;
 
-class DragonSpaceCraft :public SpaceCraft
+class DragonSpaceCraft :public Spacecraft
 {
 public:
     DragonSpaceCraft(Context* l,string s);
 protected:
-    void loadCargo(Context* load);
+    void sendSpaceCraft();
+    void returnSpaceCraft();
 };
 
 #endif

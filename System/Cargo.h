@@ -2,6 +2,8 @@
 #define Cargo_H
 #include "Load.h"
 
+using namespace std;
+
 class Cargo :public Load
 {
 public:

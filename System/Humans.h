@@ -2,6 +2,8 @@
 #define Humans_H
 #include "Load.h"
 
+using namespace std;
+
 class Humans :public Load
 {
 public:

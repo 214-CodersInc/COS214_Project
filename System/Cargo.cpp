@@ -3,31 +3,36 @@
 #include <string>
 #include <cstring>
 
-Cargo:Cargo(int capacity):Load(capacity)
+using namespace std;
+
+Cargo::Cargo(int capacity):Load(capacity)
 {
 	
 }
 
-bool Cargo:receive()
+bool Cargo::receive()
 {
 	return this->received;
 }
 
-bool Cargo:test()
+bool Cargo::test()
 {
-	cout<<"Cargo loaded onto Spacecraft"<<endl;
+	
 	int max = 10000;
 	if(loadCapacity <= max)
 	{
+		cout<<"Cargo loaded onto Spacecraft"<<endl;
+		cout<<" "<<endl;
 		return true;
 	}
 	else
 	{
 		return false;
+	}
 }
 
-Cargo:~Cargo()
+Cargo::~Cargo()
 {
-	cout<<"Cargo Destroyed"<<endl;
+	cout<<"Cargo safely transported"<<endl;
 }
 
