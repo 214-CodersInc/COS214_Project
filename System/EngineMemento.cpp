@@ -1,14 +1,14 @@
 #include "EngineMemento.h"
 
-EngineMemento::EngineMemento(int i,int t):fuel(i),temperature(t)  //Constructor
+EngineMemento::EngineMemento(int i,int t):fuel(i),temperature(t)  ///Constructor
 {
 }
 
-void EngineMemento::setFuel(int f) // Initialising fuel
+void EngineMemento::setFuel(int f) /// Initialising fuel
 {
     fuel=f;
 }
-void EngineMemento::setTemp(int f)  //Initialising temperature
+void EngineMemento::setTemp(int f)  ///Initialising temperature
 {
     temperature=f;
 }
@@ -23,6 +23,6 @@ int EngineMemento::getTemp()
     return temperature;
 }
 
-EngineMemento::~EngineMemento()  //Destructor
+EngineMemento::~EngineMemento()  ///Destructor
 {
 }
