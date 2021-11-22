@@ -6,12 +6,12 @@
 
 using namespace std;
 
-LaunchDragonSpacecraft::LaunchDragonSpacecraft()
+LaunchDragonSpacecraft::LaunchDragonSpacecraft()  ///Constructor
 {
     SetSuccessor(nullptr);
 }
 
-void LaunchDragonSpacecraft::HandleRequest()
+void LaunchDragonSpacecraft::HandleRequest()  ///Handling the requests of the spacecraft before launching to orbit
 {
     bool check1 = false;
     string dragonDest = " ";
