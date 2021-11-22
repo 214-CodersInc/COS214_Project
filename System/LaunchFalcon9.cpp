@@ -1,11 +1,11 @@
 #include "LaunchFalcon9.h"
 
-LaunchFalcon9::LaunchFalcon9(Rocket* roc)  //Construtor, initialising the rocket
+LaunchFalcon9::LaunchFalcon9(Rocket* roc)  ///Construtor, initialising the rocket
 {
     rocket=roc;
 }
 
-void LaunchFalcon9::HandleRequest() // Handling the requests of the engines before launching to orbit
+void LaunchFalcon9::HandleRequest() /// Handling the requests of the engines before launching to orbit
 {
     Engine* merlinEngines[9];
     merlinEngines[0]=new MerlinEngine(210,32,34,100);
@@ -53,5 +53,5 @@ void LaunchFalcon9::HandleRequest() // Handling the requests of the engines befo
     cout<<"Satellites have been attached to the rocket"<<endl;
 }
 
-LaunchFalcon9::~LaunchFalcon9()  //Destructor
+LaunchFalcon9::~LaunchFalcon9()  ///Destructor
 {}
