@@ -4,21 +4,21 @@ using namespace std;
 
 Satellite::Satellite(Mediator* _user, string Name, string Status, double dist, double _area)  ///Constructor, initialising all the variables
 {
-    this->name= Name;
-    this->user = _user;
+    this->name= Name;                                   //SETALLITE NAME
+    this->user = _user;                                 //USER
     this->status= Status;
     this->distance= dist;
     this->area= _area;
 }
-double Satellite::getDistance()
+double Satellite::getDistance()                         //GETTER FOR DISTANCE
 { return distance;}
 
-void Satellite::setStatus(string s)
+void Satellite::setStatus(string s)                     //SETTER FOR STATUS
 {
     status= s;
 }
 
-Satellite::Satellite(const Satellite& sat)  ///Constructor
+Satellite::Satellite(const Satellite& sat)             //CONSTRUCTOR-HELPER FOR CLONE
 {
     user= sat.user;
     name=sat.name;
@@ -27,29 +27,26 @@ Satellite::Satellite(const Satellite& sat)  ///Constructor
     area= sat.area;
 }
 
-Satellite* Satellite::clone()  ///Clone funtion to duplicate the satellite
+Satellite* Satellite::clone()                          //CLONES THE ONE-SELF
 {
     return new Satellite(*this);
 }
 
-void Satellite::updateDistance()   
+void Satellite::updateDistance()                       //UPDATE DISTANCE AFTER 200KM
 {
     distance+=200;
 }
 
-Satellite::~Satellite()  ///Destructor
+Satellite::~Satellite()                                 //Destructor
 {
 }
 
-bool Satellite::testDistance()   ///Testing and validating distance
+bool Satellite::testDistance()                          ///Testing and validating distance
 {
     if( this->distance == distanceToOrbit)
     {
         cout<<"Orbits reached"<<endl;
         cout<<"Satellites will slowly spread out equally to cover a large area"<<endl;
-
-
-        //calculation to get the area that each satellite will occupy
     
     }
     else{
@@ -57,12 +54,12 @@ bool Satellite::testDistance()   ///Testing and validating distance
         {
             cout<<"Orbit not yet reached"<<endl;
 
-            int distanceLeft= distanceToOrbit - distance;
+            double distanceLeft= distanceToOrbit - distance;
 
             cout<<"Falcon is still "<<distanceLeft <<" away"<<endl;
         }
         else{
-            cout<<"Warning !!!"<<endl;
+            cout<<"Warning !!! PASSING ORBIT"<<endl;
         }
     }
 
