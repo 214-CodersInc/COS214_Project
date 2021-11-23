@@ -4,21 +4,21 @@ using namespace std;
 
 Satellite::Satellite(Mediator* _user, string Name, string Status, double dist, double _area)  ///Constructor, initialising all the variables
 {
-    this->name= Name;                                   //SETALLITE NAME
-    this->user = _user;                                 //USER
+    this->name= Name;                                   ///SETALLITE NAME
+    this->user = _user;                                 ///USER
     this->status= Status;
     this->distance= dist;
     this->area= _area;
 }
-double Satellite::getDistance()                         //GETTER FOR DISTANCE
+double Satellite::getDistance()                         ///GETTER FOR DISTANCE
 { return distance;}
 
-void Satellite::setStatus(string s)                     //SETTER FOR STATUS
+void Satellite::setStatus(string s)                     ///SETTER FOR STATUS
 {
     status= s;
 }
 
-Satellite::Satellite(const Satellite& sat)             //CONSTRUCTOR-HELPER FOR CLONE
+Satellite::Satellite(const Satellite& sat)             ///CONSTRUCTOR-HELPER FOR CLONE
 {
     user= sat.user;
     name=sat.name;
@@ -27,17 +27,17 @@ Satellite::Satellite(const Satellite& sat)             //CONSTRUCTOR-HELPER FOR 
     area= sat.area;
 }
 
-Satellite* Satellite::clone()                          //CLONES THE ONE-SELF
+Satellite* Satellite::clone()                          ///CLONES THE ONE-SELF
 {
     return new Satellite(*this);
 }
 
-void Satellite::updateDistance()                       //UPDATE DISTANCE AFTER 200KM
+void Satellite::updateDistance()                       ///UPDATE DISTANCE AFTER 200KM
 {
     distance+=200;
 }
 
-Satellite::~Satellite()                                 //Destructor
+Satellite::~Satellite()                                 ///Destructor
 {
 }
 
