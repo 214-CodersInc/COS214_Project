@@ -3,7 +3,7 @@
 
 using namespace std;
 
-User::User(/* args */)
+User::User(/* args */)                                  //DEFAULT CONSTRUCTOR
 {
 }
 
@@ -16,17 +16,17 @@ User::~User()
 {
 }
 
-void User::setName(string Name)
+void User::setName(string Name)                         //SETTER FOR NAME
 {
     userName= Name;
 }
 
-string User::getName()
+string User::getName()                                 //GETTER FOR NAME
 {
     return userName;
 }
 
-void User::attach(Satellite* sat)
+void User::attach(Satellite* sat)                      //ATTACH SETALLITE TO THE LIST
 {
     if(satellites.size() != satellites.max_size())
     {
@@ -34,9 +34,9 @@ void User::attach(Satellite* sat)
     }
 }
 
-void User::detach(Satellite* sat)
+void User::detach(Satellite* sat)                       //DETACH FROM THE LIST
 {
-    if(satellites.empty()==false )          //IF THE LIST IS NOT EMPTY
+    if(satellites.empty()==false )                     //IF THE LIST IS NOT EMPTY
     {
        bool found = false;
 
@@ -45,7 +45,7 @@ void User::detach(Satellite* sat)
         while ((it != satellites.end()) && (!found)) {
             
             if ( *it == sat) {
-                found = true;
+                found = true;                           //IF FOUND
                 satellites.erase(it);
             }
 
@@ -55,7 +55,7 @@ void User::detach(Satellite* sat)
 
 }
 
-void User::notify()
+void User::notify()                                 //NOTIFY SATELLITE
 {
     //sendSignal() and receive signal
      vector<Satellite*>::iterator it = satellites.begin();
