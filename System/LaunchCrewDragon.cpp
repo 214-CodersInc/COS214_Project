@@ -8,7 +8,7 @@ using namespace std;
 
 LaunchCrewDragon::LaunchCrewDragon()   ///Constructor
 {
-    SetSuccessor(nullptr);
+    SetSuccessor(NULL);
 }
 
 void LaunchCrewDragon::HandleRequest()  ///Handling the request of the launch

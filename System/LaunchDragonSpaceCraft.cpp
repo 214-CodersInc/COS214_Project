@@ -1,5 +1,5 @@
 #include "Launch.h"
-#include "LaunchDragonSpacecraft.h"
+#include "LaunchDragonSpaceCraft.h"
 
 #include <iostream>
 #include <string>
@@ -8,7 +8,7 @@ using namespace std;
 
 LaunchDragonSpacecraft::LaunchDragonSpacecraft()  ///Constructor
 {
-    SetSuccessor(nullptr);
+    SetSuccessor(NULL);
 }
 
 void LaunchDragonSpacecraft::HandleRequest()  ///handling the requests of Spacecraft before launching to orbit
@@ -22,7 +22,8 @@ void LaunchDragonSpacecraft::HandleRequest()  ///handling the requests of Spacec
 
     cout<<"Enter the take off base for the Dragon Spacecraft (just the city name; e.g. - Pretoria): ";
     //cin.ignore();
-    getline(cin, dragonDest, '\n');
+    //getline(cin, dragonDest, '\n');
+    cin>>dragonDest;
 
     cout<<" "<<endl;
 

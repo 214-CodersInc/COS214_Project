@@ -3,9 +3,9 @@
 #include "MerlinEngine.h"
 #include "VacuumEngine.h"
 #include "Falcon9.h"
-#include "Falconheavy.h"
+#include "FalconHeavy.h"
 #include "Satellite.h"
-#include "SpaceCraft.h"
+#include "Spacecraft.h"
 #include "Cargo.h"
 #include "Humans.h"
 
