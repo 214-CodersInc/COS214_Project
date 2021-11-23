@@ -18,7 +18,7 @@ public:
     User(string userName);
     void attach(Satellite*);
     void detach(Satellite*);
-    void notify();  /// communication between satelittes and users
+    void notify();
     void setName(string);
     string getName();
     ~User();

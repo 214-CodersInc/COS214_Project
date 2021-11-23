@@ -6,16 +6,16 @@
 
 using namespace std;
 
-LaunchSatellite::LaunchSatellite()   ///Constructor
+LaunchSatellite::LaunchSatellite()
 {
     
 }
 
-void LaunchSatellite::HandleRequest()   ///Handling the requests of the satallite before launching to orbit
+void LaunchSatellite::HandleRequest()
 {
    
 
-    cout<<"Beginning Satellite simulation....."<<endl;
+    cout<<"================Beginning Satellite simulation============"<<endl;
     cout<<" "<<endl;
 
    
@@ -26,33 +26,55 @@ void LaunchSatellite::HandleRequest()   ///Handling the requests of the satallit
     string setalliteName= "Satellite A";
     string stat="on Earth";
     double dist=0; //in km
-    double distanceToOrbit= 24000;
+    double distanceToOrbit= 2400;
     double area= 36000;
 
     Satellite* setallite=new Satellite(Nally,setalliteName, stat, dist ,area);
 
+    cout<<"User: "<<Nally->getName()<<" is managing "<<setallite->getName()<<endl;
+    cout<<"Area: "<<area<<endl;
+    cout<<"Total distance to Orbit: "<<distanceToOrbit<<endl;
+    cout<<" "<<endl;
+
     setallite->updateDistance();
-    setallite->testDistance();
 
     setallite->statusChange();
-
-    for(int i=0; i<120; i++)
-    {
-        if(setallite->getDistance() >=distanceToOrbit)
-        {
-            setallite->updateDistance();
-            break;
-        }
-    }
-    setallite->statusChange();
+   
 
    
+        while(setallite->getDistance() <distanceToOrbit)
+        {
+            setallite->updateDistance();
+        
+        }
+    
+    setallite->statusChange();
+    //setallite->testDistance();
+
+
+    if(setallite->getDistance()>=distanceToOrbit)
+        setallite->setStatus("in Position");
+
+     //prototype design pattern
+    Satellite* clones[59];
+    Nate->attach(setallite);
+
+    for(int i=0; i<59; i++)
+    {
+        clones[i]=setallite->clone();
+        Nally->attach(clones[i]);
+      
+    }
+   
+cout<<"Satellites are now "<<setallite->getStatus()<<endl;
+Nate->notify();
+
     cout<<" "<<endl;
     cout<<"==========End of simulation=========="<<endl;
 
 }
 
-LaunchSatellite::~LaunchSatellite()  ///Destructor
+LaunchSatellite::~LaunchSatellite()
 {
     
 }
