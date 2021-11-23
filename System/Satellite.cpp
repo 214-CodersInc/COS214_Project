@@ -2,15 +2,15 @@
 
 using namespace std;
 
-Satellite::Satellite(Mediator* _user, string Name, string Status, double dist, double _area)
+Satellite::Satellite(Mediator* _user, string Name, string Status, double dist, double _area)            //CONSTRUCTOR -INITIALIZES EVERYTHING
 {
-    this->name= Name;
+    this->name= Name;                                                                                   //SATELLITE NAME
     this->user = _user;
     this->status= Status;
-    this->distance= dist;
+    this->distance= dist;                                                                               //DISTANCE
     this->area= _area;
 }
-double Satellite::getDistance()
+double Satellite::getDistance()                                                                        //RETURNS TRAVELLED DISTANCE
 { return distance;}
 
 void Satellite::setStatus(string s)
@@ -18,7 +18,7 @@ void Satellite::setStatus(string s)
     status= s;
 }
 
-Satellite::Satellite(const Satellite& sat)
+Satellite::Satellite(const Satellite& sat)                                                             //CONSTRUCTOR TO HELP WITH CLONE
 {
     user= sat.user;
     name=sat.name;
