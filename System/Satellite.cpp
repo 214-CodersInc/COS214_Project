@@ -27,12 +27,12 @@ Satellite::Satellite(const Satellite& sat)                                      
     area= sat.area;
 }
 
-Satellite* Satellite::clone()
+Satellite* Satellite::clone()                                                                          //MAKES A COPY OF ONESELF
 {
     return new Satellite(*this);
 }
 
-void Satellite::updateDistance()
+void Satellite::updateDistance()                                                                       //UPDATE DISTANCE AFTER EACH 200KM
 {
     distance+=200;
 }
@@ -68,10 +68,10 @@ bool Satellite::testDistance()
 
 }
 
-string Satellite::getName()
+string Satellite::getName()                                                                             //GETTER FOR NAME
 { return name;}
 
-/*string Satellite::getUserName()
+/*string Satellite::getUserName()                                                                       
 { return user->getName();}*/
 
 void Satellite::statusChange()
