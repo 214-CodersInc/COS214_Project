@@ -65,7 +65,8 @@ bool Satellite::testDistance()
             cout<<"Warning !!!"<<endl;
         }
     }
-
+    
+    return true;
 }
 
 string Satellite::getName()                                                                             //GETTER FOR NAME
